@@ -1,0 +1,15 @@
+#Tue May 20 10:11:18 UTC 2025
+micronaut:
+  application:
+    name: rest-demo-app
+  server:
+    port: 9090
+    context-path: "/"  # set this to remove /rest-demo-app from URL
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
